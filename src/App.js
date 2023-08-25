@@ -16,6 +16,7 @@ useEffect(() => {
 
 const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
+    console.log(response);
     const data = await response.json();
 
     setMovies(data.Search);
